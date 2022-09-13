@@ -24,14 +24,13 @@ public class DeliveryTest {
 
     @BeforeAll//Выполняется перед всеми тестами.
     static void setUpBeforeAll() {
-        Configuration.holdBrowserOpen = true;
     }
 
     @BeforeEach
 //Аннотация @BeforeEach Выполняется перед каждым тестом.
     void setUpBeforeEach() {
-
         open("http://localhost:9999");
+        Configuration.holdBrowserOpen = true;
     }
 
     @AfterAll //Выполняется после всех тестов.
@@ -98,7 +97,6 @@ public class DeliveryTest {
                 .shouldHave(Condition.text("Успешно! Встреча успешно запланирована на " + firstMeetingDate), Duration.ofSeconds(15));
         //Вторая часть.
         $("[data-test-id=\"date\"] input").sendKeys(Keys.chord(Keys.SHIFT, Keys.HOME), Keys.BACK_SPACE);
-        //String firstMeetingDates = DataGenerator.generateDate(7);
         $("[data-test-id=\"date\"] input").setValue(firstMeetingDateSeven);
 
         $(byText("Запланировать")).click();
