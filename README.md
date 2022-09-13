@@ -1,3 +1,5 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/wc51wx42d5d8drcl/branch/main?svg=true)](https://ci.appveyor.com/project/Plushcake/patterns-1/branch/main)
+
 ## Задача №1 - Заказ доставки карты (изменение даты)
 Вам необходимо автоматизировать тестирование новой функции формы заказа доставки карты:
 ![](https://github.com/netology-code/aqa-homeworks/blob/master/patterns/pic/order.png?raw=true)
